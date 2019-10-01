@@ -55,7 +55,7 @@ function getOMDB(){
   /*dont change
   */
 
-  echo $response['totalResults'].'<br>';
+  echo $response['Search'][1]["Title"].'<br>';
 }
 
 function getTodaysComic(){
