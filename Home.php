@@ -22,7 +22,7 @@
 
 
 
-    <?php getOMDB(); ?>
+    
     <?php footer(); ?>
   </body>
 </html>
