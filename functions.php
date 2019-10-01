@@ -40,7 +40,7 @@ function head(){
 }
 
 function getOMDB(){
-  $url = "http://omdbapi.com/?apikey=ddbdfa64&s=%27iron%20man%27"
+  $url = "http://omdbapi.com/?apikey=ddbdfa64&s=%27iron%20man%27";
   $handle = curl_init();
   curl_setopt($handle, CURLOPT_URL, $url);
   curl_setopt_array($handle,
