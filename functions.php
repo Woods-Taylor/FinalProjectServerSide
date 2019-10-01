@@ -39,7 +39,24 @@ function head(){
   echo $head;
 }
 
+function getOMDB(){
+  $url = "http://omdbapi.com/?apikey=ddbdfa64&s=%27iron%20man%27"
+  $handle = curl_init();
+  curl_setopt($handle, CURLOPT_URL, $url);
+  curl_setopt_array($handle,
+  array(
+  CURLOPT_URL => $url,
+  CURLOPT_RETURNTRANSFER => true
+  )
+  );
+  $output = curl_exec($handle);
+  $response = json_decode($output, true);
+  curl_close($handle);
+  /*dont change
+  */
 
+  echo $response['totalResults'].'<br>';
+}
 
 function getTodaysComic(){
 $url = "https://xkcd.com/info.0.json";
