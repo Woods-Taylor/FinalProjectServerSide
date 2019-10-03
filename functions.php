@@ -5,9 +5,9 @@
 $color='red';
 $car='BMW';
 $websiteURL = 'https://test-app-ericsson.herokuapp.com/';
-$authors = array('James_Ericsson');
-$nav_items = array('Home Page', 'Todays Comic', 'Random Comic');
-$urls = array('Home.php', 'todays.php', 'random.php');
+$authors = array('Team Alpha');
+$nav_items = array('Home Page', 'Todays Comic', 'Random Comic', 'Iron Man');
+$urls = array('Home.php', 'todays.php', 'random.php', 'ironman.php');
 
 function noCache(){
   header("Cache-Control: no-store, no-cache, must-revalidate, max-age=0");
@@ -39,6 +39,27 @@ function head(){
   echo $head;
 }
 
+function getIronMan(){
+  $url = "http://omdbapi.com/?apikey=ddbdfa64&s=%27iron%20man%27";
+  $handle = curl_init();
+  curl_setopt($handle, CURLOPT_URL, $url);
+  curl_setopt_array($handle,
+  array(
+  CURLOPT_URL => $url,
+  CURLOPT_RETURNTRANSFER => true
+  )
+  );
+  $output = curl_exec($handle);
+  $response = json_decode($output, true);
+  curl_close($handle);
+  /*dont change
+  */
+  for ($y = 0; $y < sizeof($response) ; $y++) {
+      for ($x = 0; $x < sizeof($response['Search']) ; $x++) {
+        echo $response['Search'][x]["Title"].'<br>';
+      }
+  }
+}
 function getOMDB(){
   $url = "http://omdbapi.com/?apikey=ddbdfa64&s=%27iron%20man%27";
   $handle = curl_init();
@@ -57,6 +78,8 @@ function getOMDB(){
 
   echo $response['Search'][1]["Title"].'<br>';
 }
+
+
 
 function getTodaysComic(){
 $url = "https://xkcd.com/info.0.json";
@@ -142,7 +165,7 @@ function footer()
   $footerclosetag = '</footer>';
   global $websiteURL;
   echo $footertag;
-  echo '<p>The website ' . $websiteURL . ' is By James Ericsson</p>';
+  echo '<p>The website ' . $websiteURL . ' is By Team Alpha</p>';
   echo $footerclosetag;
 }
 
