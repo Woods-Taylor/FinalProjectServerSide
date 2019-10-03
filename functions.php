@@ -58,7 +58,7 @@ function getIronMan(){
   for ($y = 0; $y < sizeof($response) ; $y++) {
     $search = $response[y];
       for ($x = 0; $x < sizeof($search) ; $x++) {
-        echo $response['Search'][x]["Title"].'<br>';
+        echo $search[x]["Title"].'<br>';
       }
   }
 }
