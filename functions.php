@@ -63,6 +63,7 @@ function getIronMan(){
   // }
 
   $NumberOfElements = count($response['Search']);
+  echo $NumberOfElements;
   for ($x = 0; $x <= $NumberOfElements ; $x++) {
     echo $response['Search'][$x]["Title"].'<br>';
   //  echo '<img src=" '.$response['Search'][$x]['Poster'].' " alt="ironman">';
