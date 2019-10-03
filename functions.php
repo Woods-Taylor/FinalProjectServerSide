@@ -54,6 +54,7 @@ function getIronMan(){
   curl_close($handle);
   /*dont change
   */
+  echo "rar";
   for ($y = 0; $y < sizeof($response) ; $y++) {
     $search = $response[y];
       for ($x = 0; $x < sizeof($search) ; $x++) {
