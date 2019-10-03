@@ -14,7 +14,7 @@
     <!-- Page specific content will go down here. -->
     <p> expected </p>
     <?php getIronMan(); ?>
-    <?php getOMDB(); ?>
+    <!-- ?php getOMDB(); ?> -->
     <p> neeto</p>
     <!-- Page specific content ends here. -->
 

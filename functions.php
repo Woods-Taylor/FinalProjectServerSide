@@ -61,9 +61,11 @@ function getIronMan(){
   //       echo $search[x]["Title"].'<br>';
   //     }
   // }
-  echo $response['Search'][1]["Title"].'<br>';
-  echo $response['Search'][2]["Title"].'<br>';
-  echo $response['Search'][3]["Title"].'<br>';
+
+  $NumberOfElements = count($response);
+  for ($x = 0; $x < $NumberOfElements ; $x++) {
+    echo $response['Search'][x]["Title"].'<br>';
+  }
 
 
 }
