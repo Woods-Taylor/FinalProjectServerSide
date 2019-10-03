@@ -54,13 +54,18 @@ function getIronMan(){
   curl_close($handle);
   /*dont change
   */
-  echo "rar";
-  for ($y = 0; $y < sizeof($response) ; $y++) {
-    $search = $response[y];
-      for ($x = 0; $x < sizeof($search) ; $x++) {
-        echo $search[x]["Title"].'<br>';
-      }
-  }
+  //  echo "rar";
+  // for ($y = 0; $y < sizeof($response) ; $y++) {
+  //   $search = $response[y];
+  //     for ($x = 0; $x < sizeof($search) ; $x++) {
+  //       echo $search[x]["Title"].'<br>';
+  //     }
+  // }
+  echo $response['Search'][1]["Title"].'<br>';
+  echo $response['Search'][2]["Title"].'<br>';
+  echo $response['Search'][3]["Title"].'<br>';
+
+
 }
 function getOMDB(){
   $url = "http://omdbapi.com/?apikey=ddbdfa64&s=%27iron%20man%27";
