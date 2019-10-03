@@ -68,9 +68,8 @@ function getIronMan(){
   //  echo '<img src=" '.$response['Search'][$x]['Poster'].' " alt="ironman">';
   //  echo $response['Search'][$x]['Poster']
   }
-
-
 }
+
 function getOMDB(){
   $url = "http://omdbapi.com/?apikey=ddbdfa64&s=%27iron%20man%27";
   $handle = curl_init();
