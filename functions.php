@@ -64,7 +64,7 @@ function getIronMan(){
 
   $NumberOfElements = count($response);
   for ($x = 0; $x < $NumberOfElements ; $x++) {
-    echo $response['Search'][x]["Title"].'<br>';
+    echo $response['Search'][$x]["Title"].'<br>';
   }
 
 
