@@ -25,10 +25,9 @@
       <script>
         $(document).ready(function(){
         $("#submit").click(function(){
-          alert("wut");
           $.ajax({
             url: "test.php",
-            data: {'Search' : true},
+            data: {'random' : true},
             dataType:"HTML",
             success: function(data){
             console.log("Success");

@@ -1,9 +1,6 @@
 <?php
 if(isset($_POST['random'])) {
-    getData();
+    testgetMovies("Pass");
 } else {
-    echo 'fail';
-};
-function getData(){
-    echo "<p> Raar </p>"
+    testgetMovies("fail");
 };
