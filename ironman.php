@@ -15,10 +15,25 @@
 
     <!-- Page specific content will go down here. -->
     <div class="center">
+      <div id="random">
+        <p>test</p>
+      </div>
       <form action="ironman.php" method="GET">
       <input id="search" type="text" placeholder="Type here">
       <input id="submit" type="submit" value="Search">
       </form>
+      <!-- Javascript implementing jQuery and ajax in order to dynamically load content from the getRandom.php page -->
+      <script>
+        $(document).ready(function(){
+        $("#submit").click(function(){
+          $.ajax({url: "getRandom.php", success: function(result){
+            console.log("Success");
+            $("#random").html(result);
+          }});
+         });
+        });
+      </script>
+      <!-- Page specific content ends here. -->
     <?php getIronMan(); ?>
     </div>
     <!-- Page specific content ends here. -->
