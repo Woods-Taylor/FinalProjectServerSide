@@ -15,6 +15,10 @@
 
     <!-- Page specific content will go down here. -->
     <div class="center">
+      <form action="users.php" method="GET">
+      <input id="search" type="text" placeholder="Type here">
+      <input id="submit" type="submit" value="Search">
+      </form>
     <?php getIronMan(); ?>
     </div>
     <!-- Page specific content ends here. -->
