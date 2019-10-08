@@ -16,7 +16,7 @@
     <!-- Page specific content will go down here. -->
     <div class="center">
       <div id="random">
-        <p>test</p>
+
       </div>
       <form action="ironman.php" method="GET">
       <input id="search" type="text" placeholder="Type here">
