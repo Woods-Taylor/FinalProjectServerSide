@@ -30,9 +30,9 @@
             url: "getMovies.php",
             data: {'Search' : true},
             dataType:"HTML",
-            success: function(result){
+            success: function(data){
             console.log("Success");
-            $("#random").html(result);
+            $("#random").html(data);
           }});
          });
         });
