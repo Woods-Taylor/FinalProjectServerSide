@@ -26,7 +26,10 @@
         $(document).ready(function(){
         $("#submit").click(function(){
           alert("wut");
-          $.ajax({url: "getMovies.php", success: function(result){
+          $.ajax({
+            url: "getMovies.php",
+            data: {'Search' : "neet"},
+            success: function(result){
             console.log("Success");
             $("#random").html(result);
           }});

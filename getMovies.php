@@ -3,5 +3,12 @@
   <?php require 'functions.php';?>
   <?php noCache(); ?>
   <!-- <script type='text/javascript'>alert("PHP blows");</script>"; -->
-  <?php testgetMovies("words hurt"); ?>
+  <?php
+    if(isset($_POST['random'])) {
+        testgetMovies("Pass");
+    } else {
+        testgetMovies("Fail");
+    };
+  ?>
+
 </html>
