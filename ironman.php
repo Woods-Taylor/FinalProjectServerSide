@@ -27,7 +27,7 @@
         $("#submit").click(function(){
           alert("wut");
           $.ajax({
-            url: "getMovies.php",
+            url: "test.php",
             data: {'Search' : true},
             dataType:"HTML",
             success: function(data){
