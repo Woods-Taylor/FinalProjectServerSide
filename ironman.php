@@ -16,12 +16,11 @@
     <!-- Page specific content will go down here. -->
     <div class="center">
       <div id="random">
-
+        <?php getRandomComic(); ?>
       </div>
-      <form action="ironman.php" method="GET">
+
       <input id="search" type="text" placeholder="Type here">
       <input id="submit" type="submit" value="Search">
-      </form>
       <!-- Javascript implementing jQuery and ajax in order to dynamically load content from the getRandom.php page -->
       <script>
         $(document).ready(function(){
