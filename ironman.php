@@ -25,7 +25,7 @@
       <script>
         $(document).ready(function(){
         $("#submit").click(function(){
-          $.ajax({url: "getRandom.php", success: function(result){
+          $.ajax({url: "getMovies.php", success: function(result){
             console.log("Success");
             $("#random").html(result);
           }});
