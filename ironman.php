@@ -28,7 +28,7 @@
           alert("wut");
           $.ajax({
             url: "getMovies.php",
-            data: {'Search' : "neet"},
+            data: {'Search' : $("#search")},
             success: function(result){
             console.log("Success");
             $("#random").html(result);
