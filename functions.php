@@ -90,7 +90,7 @@ function getMovies($searchQuery){
 }
 
 function testgetMovies($search){
-    echo '<br>'.$search.'<br>';
+    echo "<script type='text/javascript'>alert('$search');</script>";
 }
 
 function getOMDB(){
